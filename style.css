@@ -68,13 +68,21 @@ a:visited {
     align-items: center;
 }
 
-.game-screen {
+.game-container {
     background-color: var(--elevation-one);
     border: 2px solid var(--elevation-two);
     border-radius: 16px;
 
     height: 600px;
     width: 100%;
+}
+
+.symbol-selection-container {
+
+}
+
+.game-screen {
+
 }
 
 .footer {
