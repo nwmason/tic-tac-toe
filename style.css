@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+
+
+:root {
+    --bg-color: #121212;
+    --elevation-one: #232323;
+    --elevation-two: #343434;
+    --text-color: #CFD8DC;
+    --primary-color: #6A1B9A;
+    --secondary-color: #2a1b9a;
+
+    --player-one-color: #01963A;
+    --player-two-color: #96015d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+
+    background-color: var(--bg-color);
+
+    display: grid;
+    grid-template-rows: 1.2fr 8fr 0.7fr;
+}
+
+* {
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MONO" 1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:visited {
+    color: var(--text-color);
+}
+  
+
+.header {
+    background-color: var(--elevation-two);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    margin-left: 64px;
+    margin-right: 64px;
+    border-radius: 12px;
+    font-size: 44px;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    margin-left: 128px;
+    margin-right: 128px;
+    margin-top: -32px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.game-screen {
+    background-color: var(--elevation-one);
+    border: 2px solid var(--elevation-two);
+    border-radius: 16px;
+
+    height: 600px;
+    width: 100%;
+}
+
+.footer {
+    background-color: var(--elevation-one);
+    color: var(--text-color);
+    border-top: 2px solid var(--elevation-two);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 16px;
+}
