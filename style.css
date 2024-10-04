@@ -5,10 +5,9 @@
     --bg-color: #121212;
     --elevation-one: #232323;
     --elevation-two: #343434;
+    --elevation-three: #454545;
     --text-color: #CFD8DC;
     --primary-color: #6A1B9A;
-    --secondary-color: #2a1b9a;
-
     --player-one-color: #01963A;
     --player-two-color: #96015d;
 }
@@ -53,6 +52,7 @@ a:visited {
     margin: 16px;
     margin-left: 64px;
     margin-right: 64px;
+    border: 2px solid var(--elevation-three);
     border-radius: 12px;
     font-size: 44px;
     font-weight: 500;
@@ -60,8 +60,8 @@ a:visited {
 
 .container {
     display: flex;
-    margin-left: 128px;
-    margin-right: 128px;
+    margin-left: 32px;
+    margin-right: 32px;
     margin-top: -32px;
     
     justify-content: center;
@@ -73,15 +73,106 @@ a:visited {
     border: 2px solid var(--elevation-two);
     border-radius: 16px;
 
-    height: 600px;
+    height: 60ra0px;
     width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 16px;
 }
 
-.symbol-selection-container {
+.game-menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    border: 2px solid var(--elevation-two);
+    border-radius: 16px 0 0 16px;
+}
 
+.game-setup-menu {
+    display: grid;
+    grid-template: 0.3fr 1fr 1fr / 1fr 1fr;
+    gap: 16px;
+}
+
+#namep1, #namep2 {
+    background-color: #00000000;
+    border: none;
+    border-bottom: 2px solid var(--elevation-three);
+    box-shadow: 0 6px 6px -4px var(--bg-color);
+
+    font-size: 28px;
+    height: 32px;
+    width: 100%;
+    color: var(--primary-color);
+    transition: 0.4s;
+}
+
+#namep1:focus, #namep2:focus {
+    outline: none;
+    box-shadow: 0 6px 6px -4px var(--primary-color);
+}
+
+#namep1:focus {
+    color: var(--player-one-color);
+}
+
+#namep2:focus {
+    color: var(--player-two-color);
+}
+
+.cross, .nought {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 500;
+}
+
+.cross {
+    color: var(--player-one-color);
+}
+
+.nought {
+    color: var(--player-two-color);
+}
+
+.btn-start-game {
+    background-color: var(--elevation-two);
+    color: var(--text-color);
+    border: 2px solid var(--elevation-three);
+    border-radius: 16px;
+    grid-area: 3 / 1 / 3 / 3;
+    width: 75%;
+    height: 3.5rem;
+    font-size: 18px;
+    justify-self: center;
+    transition: all 0.25s, transform 0.15s;
+}
+
+.btn-start-game:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--elevation-two);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.btn-start-game:active {
+    background-color: var(--text-color);
+    transform: translateY(4px);
 }
 
 .game-screen {
+    border: 2px solid var(--elevation-two);
+    border-left: none;
+    border-radius: 0 16px 16px 0;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 4px;
+    padding: 8px;
+}
+
+.game-tile {
+    border: 2px solid var(--elevation-two);
+    border-radius: 16px;
 
 }
 
